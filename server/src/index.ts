@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express from 'express';
 import blogRouter from './routes/blog';
 import summarizeRouter from './routes/summarize';

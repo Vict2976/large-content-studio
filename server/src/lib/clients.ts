@@ -1,15 +1,9 @@
 import Anthropic from '@anthropic-ai/sdk';
-import OpenAI from 'openai';
-import { GoogleGenerativeAI } from '@google/generative-ai';
 import { anthropic } from '@ai-sdk/anthropic';
 
 // A placeholder key lets the SDK construct without throwing when no real key is configured;
-// the request itself fails with a 401 at call time instead of crashing the whole server at boot.
+// the request itself fails at call time instead of crashing the whole server at boot.
 export const anthropicClient = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY ?? 'sk-ant-placeholder' });
-export const openaiClient = new OpenAI({ apiKey: process.env.OPENAI_API_KEY ?? 'sk-placeholder' });
-
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY ?? '');
-export const googleModel = genAI.getGenerativeModel({ model: 'gemini-1.5-pro' });
 
 export { anthropic };
 
@@ -22,10 +16,19 @@ interface AgentOutput {
   output: string;
 }
 
-// Stands in for a real LangChain AgentExecutor — the call-site detector matches on the
-// `.invoke(...)` shape itself, not on where the object came from.
+// Wraps a real Anthropic call behind the `.invoke()` shape a LangChain AgentExecutor exposes —
+// the call-site detector matches on that shape, not on which package it came from.
 export const contentAgent = {
-  invoke: async (input: AgentInput): Promise<AgentOutput> => ({
-    output: `(mock) ${input.persona} received: ${input.input}`,
-  }),
+  invoke: async (input: AgentInput): Promise<AgentOutput> => {
+    const response = await anthropicClient.messages.create({
+      model: 'claude-sonnet-5',
+      max_tokens: 500,
+      system: input.persona,
+      messages: [{ role: 'user', content: input.input }],
+    });
+    const output = response.content
+      .map((block: { type: string; text?: string }) => (block.type === 'text' ? (block.text ?? '') : ''))
+      .join('');
+    return { output };
+  },
 };
