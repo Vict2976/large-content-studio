@@ -1,0 +1,40 @@
+/* Otto design tokens — dark creative-studio palette. */
+:root {
+  /* Color */
+  --color-bg: #0b0b10;
+  --color-bg-raised: #16151d;
+  --color-bg-sunken: #08070c;
+  --color-ink: #f4f3f7;
+  --color-ink-muted: #9b98a8;
+  --color-border: #26242f;
+  --color-accent-a: #8b5cf6;
+  --color-accent-b: #22d3ee;
+  --color-good: #34d399;
+  --color-danger: #f87171;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-8: 48px;
+  --space-10: 64px;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+
+  /* Shadow */
+  --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 20px 60px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 0 1px rgba(139, 92, 246, 0.35), 0 0 32px rgba(139, 92, 246, 0.25);
+
+  /* Typography */
+  --font-display: 'Space Grotesk', 'Sora', ui-sans-serif, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --text-sm: 13px;
+  --text-lg: 19px;
+}
