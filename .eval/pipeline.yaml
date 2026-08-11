@@ -1,0 +1,14 @@
+stack: node
+packageManager: npm
+commit: fec39dcd9f45b6abe1fbd397b5a474922a0719bd
+verifiedAt: 2026-08-11T13:31:10.134Z
+commands:
+  install: npm ci
+  build: null
+  analyze: null
+  test: null
+status:
+  install: none
+  build: none
+  analyze: none
+  test: none
