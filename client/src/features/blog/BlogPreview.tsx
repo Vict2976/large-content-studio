@@ -1,6 +1,7 @@
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 
+// @uxid client/src/features/blog/BlogPreview::BlogPreview
 export function BlogPreview({ draft }: { draft: string }) {
   return (
     <Card>
