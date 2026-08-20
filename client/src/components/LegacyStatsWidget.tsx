@@ -9,6 +9,7 @@ interface State {
 }
 
 // Predates the hooks-based rewrite of the rest of this app; kept as-is because it still works.
+// @uxid client/src/components/LegacyStatsWidget::LegacyStatsWidget
 export class LegacyStatsWidget extends Component<Props, State> {
   state: State = { expanded: false };
 

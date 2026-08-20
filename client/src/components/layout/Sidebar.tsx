@@ -13,6 +13,7 @@ interface Props {
   onSelect: (tab: Tab) => void;
 }
 
+// @uxid client/src/components/layout/Sidebar::Sidebar
 export function Sidebar({ active, onSelect }: Props) {
   return (
     <nav className="sidebar">
