@@ -1,0 +1,1323 @@
+{
+  "schema": "evaluation-tool/trace-map@1",
+  "summary": {
+    "files": 41,
+    "components": 18,
+    "elements": 23,
+    "prompts": 6,
+    "aiCallSites": 6,
+    "aiCallSitesUnlinked": 5,
+    "filesNotAnalysedForAiCalls": 0
+  },
+  "units": [
+    {
+      "id": "App",
+      "kind": "component",
+      "name": "App",
+      "description": "Function component. Renders: Routes, Route, Landing, Studio.",
+      "file": "client/src/App.tsx",
+      "startLine": 5,
+      "endLine": 12
+    },
+    {
+      "id": "client/src/App.tsx",
+      "kind": "file",
+      "name": "client/src/App.tsx",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/App.tsx",
+      "startLine": 1,
+      "endLine": 13
+    },
+    {
+      "id": "LegacyStatsWidget",
+      "kind": "component",
+      "name": "LegacyStatsWidget",
+      "description": "Class component. Renders: div, button, p, strong.",
+      "file": "client/src/components/LegacyStatsWidget.tsx",
+      "startLine": 12,
+      "endLine": 35,
+      "childIds": [
+        "LegacyStatsWidget.button"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "LegacyStatsWidget.button",
+      "kind": "element",
+      "name": "button",
+      "description": "Button. labelled \"stats\". Handlers: onClick.",
+      "file": "client/src/components/LegacyStatsWidget.tsx",
+      "startLine": 23,
+      "endLine": 25,
+      "selector": "[data-uxid=\"LegacyStatsWidget.button\"]",
+      "parentId": "LegacyStatsWidget",
+      "accessibleName": "stats",
+      "handlers": [
+        "onClick"
+      ]
+    },
+    {
+      "id": "client/src/components/LegacyStatsWidget.tsx",
+      "kind": "file",
+      "name": "client/src/components/LegacyStatsWidget.tsx",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/components/LegacyStatsWidget.tsx",
+      "startLine": 1,
+      "endLine": 36
+    },
+    {
+      "id": "Navbar",
+      "kind": "component",
+      "name": "Navbar",
+      "description": "Function component. Hooks: useState. Renders: header, span, input, Link.",
+      "file": "client/src/components/layout/Navbar.tsx",
+      "startLine": 4,
+      "endLine": 21,
+      "childIds": [
+        "Navbar.input"
+      ],
+      "hooks": [
+        "useState"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "Navbar.input",
+      "kind": "element",
+      "name": "input",
+      "description": "Text input field. placeholder \"Search…\". Handlers: onChange.",
+      "file": "client/src/components/layout/Navbar.tsx",
+      "startLine": 13,
+      "endLine": 18,
+      "selector": "[data-uxid=\"Navbar.input\"]",
+      "parentId": "Navbar",
+      "accessibleName": "Search generations",
+      "handlers": [
+        "onChange"
+      ]
+    },
+    {
+      "id": "client/src/components/layout/Navbar.tsx",
+      "kind": "file",
+      "name": "client/src/components/layout/Navbar.tsx",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/components/layout/Navbar.tsx",
+      "startLine": 1,
+      "endLine": 22
+    },
+    {
+      "id": "Sidebar",
+      "kind": "component",
+      "name": "Sidebar",
+      "description": "Function component. Props: active, onSelect. Renders: nav, button.",
+      "file": "client/src/components/layout/Sidebar.tsx",
+      "startLine": 16,
+      "endLine": 26,
+      "childIds": [
+        "Sidebar.button"
+      ],
+      "props": [
+        "active",
+        "onSelect"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "Sidebar.button",
+      "kind": "element",
+      "name": "button",
+      "description": "Button. Handlers: onClick.",
+      "file": "client/src/components/layout/Sidebar.tsx",
+      "startLine": 20,
+      "endLine": 22,
+      "selector": "[data-uxid=\"Sidebar.button\"]",
+      "parentId": "Sidebar",
+      "handlers": [
+        "onClick"
+      ]
+    },
+    {
+      "id": "client/src/components/layout/Sidebar.tsx",
+      "kind": "file",
+      "name": "client/src/components/layout/Sidebar.tsx",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/components/layout/Sidebar.tsx",
+      "startLine": 1,
+      "endLine": 27
+    },
+    {
+      "id": "Button",
+      "kind": "component",
+      "name": "Button",
+      "description": "Function component. Props: variant, className, ...rest. Renders: button.",
+      "file": "client/src/components/ui/Button.tsx",
+      "startLine": 7,
+      "endLine": 9,
+      "childIds": [
+        "Button.button"
+      ],
+      "props": [
+        "variant",
+        "className",
+        "...rest"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "Button.button",
+      "kind": "element",
+      "name": "button",
+      "description": "Button.",
+      "file": "client/src/components/ui/Button.tsx",
+      "startLine": 8,
+      "endLine": 8,
+      "selector": "[data-uxid=\"Button.button\"]",
+      "parentId": "Button"
+    },
+    {
+      "id": "client/src/components/ui/Button.tsx",
+      "kind": "file",
+      "name": "client/src/components/ui/Button.tsx",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/components/ui/Button.tsx",
+      "startLine": 1,
+      "endLine": 10
+    },
+    {
+      "id": "Card",
+      "kind": "component",
+      "name": "Card",
+      "description": "Function component. Props: children. Renders: div.",
+      "file": "client/src/components/ui/Card.tsx",
+      "startLine": 3,
+      "endLine": 5,
+      "props": [
+        "children"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "client/src/components/ui/Card.tsx",
+      "kind": "file",
+      "name": "client/src/components/ui/Card.tsx",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/components/ui/Card.tsx",
+      "startLine": 1,
+      "endLine": 6
+    },
+    {
+      "id": "Select",
+      "kind": "component",
+      "name": "Select",
+      "description": "Function component. Props: value, options, onChange, ariaLabel. Renders: select, option.",
+      "file": "client/src/components/ui/Select.tsx",
+      "startLine": 13,
+      "endLine": 23,
+      "childIds": [
+        "Select.select",
+        "Select.option"
+      ],
+      "props": [
+        "value",
+        "options",
+        "onChange",
+        "ariaLabel"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "Select.select",
+      "kind": "element",
+      "name": "select",
+      "description": "Dropdown select. Handlers: onChange.",
+      "file": "client/src/components/ui/Select.tsx",
+      "startLine": 15,
+      "endLine": 21,
+      "selector": "[data-uxid=\"Select.select\"]",
+      "parentId": "Select",
+      "handlers": [
+        "onChange"
+      ]
+    },
+    {
+      "id": "Select.option",
+      "kind": "element",
+      "name": "option",
+      "description": "Select option.",
+      "file": "client/src/components/ui/Select.tsx",
+      "startLine": 17,
+      "endLine": 19,
+      "selector": "[data-uxid=\"Select.option\"]",
+      "parentId": "Select"
+    },
+    {
+      "id": "client/src/components/ui/Select.tsx",
+      "kind": "file",
+      "name": "client/src/components/ui/Select.tsx",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/components/ui/Select.tsx",
+      "startLine": 1,
+      "endLine": 24
+    },
+    {
+      "id": "TextArea",
+      "kind": "component",
+      "name": "TextArea",
+      "description": "Function component. Props: props: TextareaHTMLAttributes. Renders: textarea.",
+      "file": "client/src/components/ui/TextArea.tsx",
+      "startLine": 3,
+      "endLine": 5,
+      "childIds": [
+        "TextArea.textarea"
+      ],
+      "props": [
+        "props: TextareaHTMLAttributes"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "TextArea.textarea",
+      "kind": "element",
+      "name": "textarea",
+      "description": "Multi-line text field.",
+      "file": "client/src/components/ui/TextArea.tsx",
+      "startLine": 4,
+      "endLine": 4,
+      "selector": "[data-uxid=\"TextArea.textarea\"]",
+      "parentId": "TextArea"
+    },
+    {
+      "id": "client/src/components/ui/TextArea.tsx",
+      "kind": "file",
+      "name": "client/src/components/ui/TextArea.tsx",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/components/ui/TextArea.tsx",
+      "startLine": 1,
+      "endLine": 6
+    },
+    {
+      "id": "BlogEditor",
+      "kind": "component",
+      "name": "BlogEditor",
+      "description": "Function component. Props: onDraft. Hooks: useState, useBlogGenerator. Renders: section, TextArea, Select, Button.",
+      "file": "client/src/features/blog/BlogEditor.tsx",
+      "startLine": 17,
+      "endLine": 41,
+      "childIds": [
+        "BlogEditor.textarea",
+        "BlogEditor.select",
+        "BlogEditor.button"
+      ],
+      "props": [
+        "onDraft"
+      ],
+      "hooks": [
+        "useState",
+        "useBlogGenerator"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "BlogEditor.textarea",
+      "kind": "element",
+      "name": "TextArea",
+      "description": "<TextArea> component. placeholder \"What's the post about?\". Handlers: onChange.",
+      "file": "client/src/features/blog/BlogEditor.tsx",
+      "startLine": 29,
+      "endLine": 34,
+      "selector": "[data-uxid=\"BlogEditor.textarea\"]",
+      "parentId": "BlogEditor",
+      "refId": "TextArea",
+      "accessibleName": "Blog topic",
+      "handlers": [
+        "onChange"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "BlogEditor.select",
+      "kind": "element",
+      "name": "Select",
+      "description": "<Select> component. Handlers: onChange.",
+      "file": "client/src/features/blog/BlogEditor.tsx",
+      "startLine": 35,
+      "endLine": 35,
+      "selector": "[data-uxid=\"BlogEditor.select\"]",
+      "parentId": "BlogEditor",
+      "refId": "Select",
+      "handlers": [
+        "onChange"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "BlogEditor.button",
+      "kind": "element",
+      "name": "Button",
+      "description": "<Button> component. can be disabled. Handlers: onClick.",
+      "file": "client/src/features/blog/BlogEditor.tsx",
+      "startLine": 36,
+      "endLine": 38,
+      "selector": "[data-uxid=\"BlogEditor.button\"]",
+      "parentId": "BlogEditor",
+      "refId": "Button",
+      "handlers": [
+        "onClick"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "client/src/features/blog/BlogEditor.tsx",
+      "kind": "file",
+      "name": "client/src/features/blog/BlogEditor.tsx",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/features/blog/BlogEditor.tsx",
+      "startLine": 1,
+      "endLine": 42
+    },
+    {
+      "id": "BlogPreview",
+      "kind": "component",
+      "name": "BlogPreview",
+      "description": "Function component. Props: draft. Renders: p, Card, Button.",
+      "file": "client/src/features/blog/BlogPreview.tsx",
+      "startLine": 4,
+      "endLine": 13,
+      "childIds": [
+        "BlogPreview.button"
+      ],
+      "props": [
+        "draft"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "BlogPreview.button",
+      "kind": "element",
+      "name": "Button",
+      "description": "<Button> component. can be disabled, labelled \"Copy to clipboard\". Handlers: onClick.",
+      "file": "client/src/features/blog/BlogPreview.tsx",
+      "startLine": 8,
+      "endLine": 10,
+      "selector": "[data-uxid=\"BlogPreview.button\"]",
+      "parentId": "BlogPreview",
+      "refId": "Button",
+      "accessibleName": "Copy to clipboard",
+      "handlers": [
+        "onClick"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "client/src/features/blog/BlogPreview.tsx",
+      "kind": "file",
+      "name": "client/src/features/blog/BlogPreview.tsx",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/features/blog/BlogPreview.tsx",
+      "startLine": 1,
+      "endLine": 14
+    },
+    {
+      "id": "useBlogGenerator",
+      "kind": "hook",
+      "name": "useBlogGenerator",
+      "description": "Exported Custom hook 'useBlogGenerator'.",
+      "file": "client/src/features/blog/useBlogGenerator.ts",
+      "startLine": 4,
+      "endLine": 19,
+      "exported": true
+    },
+    {
+      "id": "client/src/features/blog/useBlogGenerator.ts",
+      "kind": "file",
+      "name": "client/src/features/blog/useBlogGenerator.ts",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/features/blog/useBlogGenerator.ts",
+      "startLine": 1,
+      "endLine": 20
+    },
+    {
+      "id": "CaptionGenerator",
+      "kind": "component",
+      "name": "CaptionGenerator",
+      "description": "Function component. Hooks: useState, useCaption. Renders: section, input, p, Button.",
+      "file": "client/src/features/captions/CaptionGenerator.tsx",
+      "startLine": 5,
+      "endLine": 23,
+      "childIds": [
+        "CaptionGenerator.input",
+        "CaptionGenerator.button"
+      ],
+      "hooks": [
+        "useState",
+        "useCaption"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "CaptionGenerator.input",
+      "kind": "element",
+      "name": "input",
+      "description": "Text input field. placeholder \"Describe the image…\". Handlers: onChange.",
+      "file": "client/src/features/captions/CaptionGenerator.tsx",
+      "startLine": 11,
+      "endLine": 16,
+      "selector": "[data-uxid=\"CaptionGenerator.input\"]",
+      "parentId": "CaptionGenerator",
+      "accessibleName": "Image description",
+      "handlers": [
+        "onChange"
+      ]
+    },
+    {
+      "id": "CaptionGenerator.button",
+      "kind": "element",
+      "name": "Button",
+      "description": "<Button> component. can be disabled. Handlers: onClick.",
+      "file": "client/src/features/captions/CaptionGenerator.tsx",
+      "startLine": 17,
+      "endLine": 19,
+      "selector": "[data-uxid=\"CaptionGenerator.button\"]",
+      "parentId": "CaptionGenerator",
+      "refId": "Button",
+      "handlers": [
+        "onClick"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "client/src/features/captions/CaptionGenerator.tsx",
+      "kind": "file",
+      "name": "client/src/features/captions/CaptionGenerator.tsx",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/features/captions/CaptionGenerator.tsx",
+      "startLine": 1,
+      "endLine": 24
+    },
+    {
+      "id": "useCaption",
+      "kind": "hook",
+      "name": "useCaption",
+      "description": "Exported Custom hook 'useCaption'.",
+      "file": "client/src/features/captions/useCaption.ts",
+      "startLine": 4,
+      "endLine": 19,
+      "exported": true
+    },
+    {
+      "id": "client/src/features/captions/useCaption.ts",
+      "kind": "file",
+      "name": "client/src/features/captions/useCaption.ts",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/features/captions/useCaption.ts",
+      "startLine": 1,
+      "endLine": 20
+    },
+    {
+      "id": "ChatWindow",
+      "kind": "component",
+      "name": "ChatWindow",
+      "description": "Function component. Hooks: useChatSession. Renders: section, MessageList, MessageInput.",
+      "file": "client/src/features/chat/ChatWindow.tsx",
+      "startLine": 5,
+      "endLine": 14,
+      "childIds": [
+        "ChatWindow.messageinput"
+      ],
+      "hooks": [
+        "useChatSession"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "ChatWindow.messageinput",
+      "kind": "element",
+      "name": "MessageInput",
+      "description": "<MessageInput> component. can be disabled. Handlers: onSend.",
+      "file": "client/src/features/chat/ChatWindow.tsx",
+      "startLine": 11,
+      "endLine": 11,
+      "selector": "[data-uxid=\"ChatWindow.messageinput\"]",
+      "parentId": "ChatWindow",
+      "refId": "MessageInput",
+      "handlers": [
+        "onSend"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "client/src/features/chat/ChatWindow.tsx",
+      "kind": "file",
+      "name": "client/src/features/chat/ChatWindow.tsx",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/features/chat/ChatWindow.tsx",
+      "startLine": 1,
+      "endLine": 15
+    },
+    {
+      "id": "MessageInput",
+      "kind": "component",
+      "name": "MessageInput",
+      "description": "Function component. Props: onSend, disabled. Hooks: useState. Renders: div, TextArea, Button.",
+      "file": "client/src/features/chat/MessageInput.tsx",
+      "startLine": 10,
+      "endLine": 37,
+      "childIds": [
+        "MessageInput.textarea",
+        "MessageInput.button"
+      ],
+      "props": [
+        "onSend",
+        "disabled"
+      ],
+      "hooks": [
+        "useState"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "MessageInput.textarea",
+      "kind": "element",
+      "name": "TextArea",
+      "description": "<TextArea> component. labelled \"Message to Otto\". Handlers: onChange, onKeyDown.",
+      "file": "client/src/features/chat/MessageInput.tsx",
+      "startLine": 21,
+      "endLine": 31,
+      "selector": "[data-uxid=\"MessageInput.textarea\"]",
+      "parentId": "MessageInput",
+      "refId": "TextArea",
+      "accessibleName": "Message to Otto",
+      "handlers": [
+        "onChange",
+        "onKeyDown"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "MessageInput.button",
+      "kind": "element",
+      "name": "Button",
+      "description": "<Button> component. can be disabled, labelled \"Send\". Handlers: onClick.",
+      "file": "client/src/features/chat/MessageInput.tsx",
+      "startLine": 32,
+      "endLine": 34,
+      "selector": "[data-uxid=\"MessageInput.button\"]",
+      "parentId": "MessageInput",
+      "refId": "Button",
+      "accessibleName": "Send",
+      "handlers": [
+        "onClick"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "client/src/features/chat/MessageInput.tsx",
+      "kind": "file",
+      "name": "client/src/features/chat/MessageInput.tsx",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/features/chat/MessageInput.tsx",
+      "startLine": 1,
+      "endLine": 38
+    },
+    {
+      "id": "MessageList",
+      "kind": "component",
+      "name": "MessageList",
+      "description": "Function component. Props: messages. Renders: ul, li.",
+      "file": "client/src/features/chat/MessageList.tsx",
+      "startLine": 3,
+      "endLine": 13,
+      "props": [
+        "messages"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "client/src/features/chat/MessageList.tsx",
+      "kind": "file",
+      "name": "client/src/features/chat/MessageList.tsx",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/features/chat/MessageList.tsx",
+      "startLine": 1,
+      "endLine": 14
+    },
+    {
+      "id": "useChatSession",
+      "kind": "hook",
+      "name": "useChatSession",
+      "description": "Exported Custom hook 'useChatSession'.",
+      "file": "client/src/features/chat/useChatSession.ts",
+      "startLine": 5,
+      "endLine": 21,
+      "exported": true
+    },
+    {
+      "id": "client/src/features/chat/useChatSession.ts",
+      "kind": "file",
+      "name": "client/src/features/chat/useChatSession.ts",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/features/chat/useChatSession.ts",
+      "startLine": 1,
+      "endLine": 22
+    },
+    {
+      "id": "SummarizerPanel",
+      "kind": "component",
+      "name": "SummarizerPanel",
+      "description": "Function component. Hooks: useState, useSummarizer. Renders: section, p, TextArea, Button.",
+      "file": "client/src/features/summarizer/SummarizerPanel.tsx",
+      "startLine": 6,
+      "endLine": 24,
+      "childIds": [
+        "SummarizerPanel.textarea",
+        "SummarizerPanel.button"
+      ],
+      "hooks": [
+        "useState",
+        "useSummarizer"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "SummarizerPanel.textarea",
+      "kind": "element",
+      "name": "TextArea",
+      "description": "<TextArea> component. placeholder \"Paste a document…\". Handlers: onChange.",
+      "file": "client/src/features/summarizer/SummarizerPanel.tsx",
+      "startLine": 12,
+      "endLine": 17,
+      "selector": "[data-uxid=\"SummarizerPanel.textarea\"]",
+      "parentId": "SummarizerPanel",
+      "refId": "TextArea",
+      "accessibleName": "Document to summarize",
+      "handlers": [
+        "onChange"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "SummarizerPanel.button",
+      "kind": "element",
+      "name": "Button",
+      "description": "<Button> component. can be disabled. Handlers: onClick.",
+      "file": "client/src/features/summarizer/SummarizerPanel.tsx",
+      "startLine": 18,
+      "endLine": 20,
+      "selector": "[data-uxid=\"SummarizerPanel.button\"]",
+      "parentId": "SummarizerPanel",
+      "refId": "Button",
+      "handlers": [
+        "onClick"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "client/src/features/summarizer/SummarizerPanel.tsx",
+      "kind": "file",
+      "name": "client/src/features/summarizer/SummarizerPanel.tsx",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/features/summarizer/SummarizerPanel.tsx",
+      "startLine": 1,
+      "endLine": 25
+    },
+    {
+      "id": "useSummarizer",
+      "kind": "hook",
+      "name": "useSummarizer",
+      "description": "Exported Custom hook 'useSummarizer'.",
+      "file": "client/src/features/summarizer/useSummarizer.ts",
+      "startLine": 4,
+      "endLine": 19,
+      "exported": true
+    },
+    {
+      "id": "client/src/features/summarizer/useSummarizer.ts",
+      "kind": "file",
+      "name": "client/src/features/summarizer/useSummarizer.ts",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/features/summarizer/useSummarizer.ts",
+      "startLine": 1,
+      "endLine": 20
+    },
+    {
+      "id": "TranslatorForm",
+      "kind": "component",
+      "name": "TranslatorForm",
+      "description": "Function component. Hooks: useState, useTranslate. Renders: section, p, TextArea, Select, Button.",
+      "file": "client/src/features/translator/TranslatorForm.tsx",
+      "startLine": 13,
+      "endLine": 32,
+      "childIds": [
+        "TranslatorForm.textarea",
+        "TranslatorForm.select",
+        "TranslatorForm.button"
+      ],
+      "hooks": [
+        "useState",
+        "useTranslate"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "TranslatorForm.textarea",
+      "kind": "element",
+      "name": "TextArea",
+      "description": "<TextArea> component. labelled \"Text to translate\". Handlers: onChange.",
+      "file": "client/src/features/translator/TranslatorForm.tsx",
+      "startLine": 20,
+      "endLine": 24,
+      "selector": "[data-uxid=\"TranslatorForm.textarea\"]",
+      "parentId": "TranslatorForm",
+      "refId": "TextArea",
+      "accessibleName": "Text to translate",
+      "handlers": [
+        "onChange"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "TranslatorForm.select",
+      "kind": "element",
+      "name": "Select",
+      "description": "<Select> component. Handlers: onChange.",
+      "file": "client/src/features/translator/TranslatorForm.tsx",
+      "startLine": 25,
+      "endLine": 25,
+      "selector": "[data-uxid=\"TranslatorForm.select\"]",
+      "parentId": "TranslatorForm",
+      "refId": "Select",
+      "handlers": [
+        "onChange"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "TranslatorForm.button",
+      "kind": "element",
+      "name": "Button",
+      "description": "<Button> component. can be disabled. Handlers: onClick.",
+      "file": "client/src/features/translator/TranslatorForm.tsx",
+      "startLine": 26,
+      "endLine": 28,
+      "selector": "[data-uxid=\"TranslatorForm.button\"]",
+      "parentId": "TranslatorForm",
+      "refId": "Button",
+      "handlers": [
+        "onClick"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "client/src/features/translator/TranslatorForm.tsx",
+      "kind": "file",
+      "name": "client/src/features/translator/TranslatorForm.tsx",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/features/translator/TranslatorForm.tsx",
+      "startLine": 1,
+      "endLine": 33
+    },
+    {
+      "id": "useTranslate",
+      "kind": "hook",
+      "name": "useTranslate",
+      "description": "Exported Custom hook 'useTranslate'.",
+      "file": "client/src/features/translator/useTranslate.ts",
+      "startLine": 4,
+      "endLine": 19,
+      "exported": true
+    },
+    {
+      "id": "client/src/features/translator/useTranslate.ts",
+      "kind": "file",
+      "name": "client/src/features/translator/useTranslate.ts",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/features/translator/useTranslate.ts",
+      "startLine": 1,
+      "endLine": 20
+    },
+    {
+      "id": "useDebounce",
+      "kind": "hook",
+      "name": "useDebounce",
+      "description": "Exported Custom hook 'useDebounce'. Params: value, delayMs.",
+      "file": "client/src/hooks/useDebounce.ts",
+      "startLine": 3,
+      "endLine": 12,
+      "props": [
+        "value",
+        "delayMs"
+      ],
+      "exported": true
+    },
+    {
+      "id": "client/src/hooks/useDebounce.ts",
+      "kind": "file",
+      "name": "client/src/hooks/useDebounce.ts",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/hooks/useDebounce.ts",
+      "startLine": 1,
+      "endLine": 13
+    },
+    {
+      "id": "postJson",
+      "kind": "function",
+      "name": "postJson",
+      "description": "Exported Function 'postJson'. Params: url, body.",
+      "file": "client/src/lib/api.ts",
+      "startLine": 1,
+      "endLine": 9,
+      "props": [
+        "url",
+        "body"
+      ],
+      "exported": true
+    },
+    {
+      "id": "client/src/lib/api.ts",
+      "kind": "file",
+      "name": "client/src/lib/api.ts",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/lib/api.ts",
+      "startLine": 1,
+      "endLine": 10
+    },
+    {
+      "id": "client/src/main.tsx",
+      "kind": "file",
+      "name": "client/src/main.tsx",
+      "description": "Source module — 0 top-level artifacts.",
+      "file": "client/src/main.tsx",
+      "startLine": 1,
+      "endLine": 14
+    },
+    {
+      "id": "Landing",
+      "kind": "component",
+      "name": "Landing",
+      "description": "Function component. Renders: div, nav, span, header, h1, p, Link.",
+      "file": "client/src/pages/Landing.tsx",
+      "startLine": 15,
+      "endLine": 69,
+      "routes": [
+        "/"
+      ]
+    },
+    {
+      "id": "client/src/pages/Landing.tsx",
+      "kind": "file",
+      "name": "client/src/pages/Landing.tsx",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/pages/Landing.tsx",
+      "startLine": 1,
+      "endLine": 70
+    },
+    {
+      "id": "Studio",
+      "kind": "component",
+      "name": "Studio",
+      "description": "Function component. Hooks: useState. Renders: div, main, Navbar, Sidebar, BlogEditor, BlogPreview, ChatWindow, SummarizerPanel.",
+      "file": "client/src/pages/Studio.tsx",
+      "startLine": 12,
+      "endLine": 37,
+      "childIds": [
+        "Studio.sidebar",
+        "Studio.blogeditor"
+      ],
+      "hooks": [
+        "useState"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "Studio.sidebar",
+      "kind": "element",
+      "name": "Sidebar",
+      "description": "<Sidebar> component. Handlers: onSelect.",
+      "file": "client/src/pages/Studio.tsx",
+      "startLine": 20,
+      "endLine": 20,
+      "selector": "[data-uxid=\"Studio.sidebar\"]",
+      "parentId": "Studio",
+      "refId": "Sidebar",
+      "handlers": [
+        "onSelect"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "Studio.blogeditor",
+      "kind": "element",
+      "name": "BlogEditor",
+      "description": "<BlogEditor> component. Handlers: onDraft.",
+      "file": "client/src/pages/Studio.tsx",
+      "startLine": 24,
+      "endLine": 24,
+      "selector": "[data-uxid=\"Studio.blogeditor\"]",
+      "parentId": "Studio",
+      "refId": "BlogEditor",
+      "handlers": [
+        "onDraft"
+      ],
+      "routes": [
+        "/studio"
+      ]
+    },
+    {
+      "id": "client/src/pages/Studio.tsx",
+      "kind": "file",
+      "name": "client/src/pages/Studio.tsx",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "client/src/pages/Studio.tsx",
+      "startLine": 1,
+      "endLine": 38
+    },
+    {
+      "id": "client/src/types.ts",
+      "kind": "file",
+      "name": "client/src/types.ts",
+      "description": "Source module — 0 top-level artifacts.",
+      "file": "client/src/types.ts",
+      "startLine": 1,
+      "endLine": 5
+    },
+    {
+      "id": "client/vite.config.ts",
+      "kind": "file",
+      "name": "client/vite.config.ts",
+      "description": "Source module — 0 top-level artifacts.",
+      "file": "client/vite.config.ts",
+      "startLine": 1,
+      "endLine": 12
+    },
+    {
+      "id": "server/src/index.ts",
+      "kind": "file",
+      "name": "server/src/index.ts",
+      "description": "Source module — 0 top-level artifacts.",
+      "file": "server/src/index.ts",
+      "startLine": 1,
+      "endLine": 27
+    },
+    {
+      "id": "server/src/lib/clients.ts",
+      "kind": "file",
+      "name": "server/src/lib/clients.ts",
+      "description": "Source module — 0 top-level artifacts.",
+      "file": "server/src/lib/clients.ts",
+      "startLine": 1,
+      "endLine": 35
+    },
+    {
+      "id": "AGENT_PERSONA",
+      "kind": "prompt",
+      "name": "AGENT_PERSONA",
+      "description": "Prompt / instruction constant 'AGENT_PERSONA' (94 chars).",
+      "file": "server/src/lib/prompts/agent.ts",
+      "startLine": 1,
+      "endLine": 2,
+      "preview": "You are Otto, an autonomous content-operations agent who plans multi-step tasks before acting.",
+      "exported": true
+    },
+    {
+      "id": "server/src/lib/prompts/agent.ts",
+      "kind": "file",
+      "name": "server/src/lib/prompts/agent.ts",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "server/src/lib/prompts/agent.ts",
+      "startLine": 1,
+      "endLine": 3
+    },
+    {
+      "id": "BLOG_SYSTEM_PROMPT",
+      "kind": "prompt",
+      "name": "BLOG_SYSTEM_PROMPT",
+      "description": "Prompt / instruction constant 'BLOG_SYSTEM_PROMPT' (137 chars).",
+      "file": "server/src/lib/prompts/blog.ts",
+      "startLine": 2,
+      "endLine": 4,
+      "preview": "You are a professional content marketer. Write engaging, SEO-friendly blog posts with a clear structure: hook, body, and call to action.",
+      "exported": true
+    },
+    {
+      "id": "server/src/lib/prompts/blog.ts",
+      "kind": "file",
+      "name": "server/src/lib/prompts/blog.ts",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "server/src/lib/prompts/blog.ts",
+      "startLine": 1,
+      "endLine": 5
+    },
+    {
+      "id": "captionPrompt",
+      "kind": "function",
+      "name": "captionPrompt",
+      "description": "Exported Function 'captionPrompt'. Params: imageDescription.",
+      "file": "server/src/lib/prompts/captions.ts",
+      "startLine": 3,
+      "endLine": 9,
+      "props": [
+        "imageDescription"
+      ],
+      "exported": true
+    },
+    {
+      "id": "captionPrompt.prompt",
+      "kind": "prompt",
+      "name": "captionPrompt.prompt",
+      "description": "Prompt returned by 'captionPrompt' (109 chars).",
+      "file": "server/src/lib/prompts/captions.ts",
+      "startLine": 4,
+      "endLine": 8,
+      "preview": "Write a short, punchy social-media caption for this image: … Include one relevant emoji and a call to action."
+    },
+    {
+      "id": "server/src/lib/prompts/captions.ts",
+      "kind": "file",
+      "name": "server/src/lib/prompts/captions.ts",
+      "description": "Source module — 2 top-level artifacts.",
+      "file": "server/src/lib/prompts/captions.ts",
+      "startLine": 1,
+      "endLine": 10
+    },
+    {
+      "id": "SUMMARIZER_PROMPTS.condense",
+      "kind": "prompt",
+      "name": "SUMMARIZER_PROMPTS.condense",
+      "description": "Prompt / instruction constant 'SUMMARIZER_PROMPTS.condense' (93 chars).",
+      "file": "server/src/lib/prompts/summarizer.ts",
+      "startLine": 2,
+      "endLine": 5,
+      "preview": "Summarize the document into no more than five bullet points. Keep each bullet under 20 words.",
+      "exported": true
+    },
+    {
+      "id": "SUMMARIZER_PROMPTS.expand",
+      "kind": "prompt",
+      "name": "SUMMARIZER_PROMPTS.expand",
+      "description": "Prompt / instruction constant 'SUMMARIZER_PROMPTS.expand' (80 chars).",
+      "file": "server/src/lib/prompts/summarizer.ts",
+      "startLine": 6,
+      "endLine": 6,
+      "preview": "Given a short summary, restore likely supporting detail without inventing facts.",
+      "exported": true
+    },
+    {
+      "id": "server/src/lib/prompts/summarizer.ts",
+      "kind": "file",
+      "name": "server/src/lib/prompts/summarizer.ts",
+      "description": "Source module — 2 top-level artifacts.",
+      "file": "server/src/lib/prompts/summarizer.ts",
+      "startLine": 1,
+      "endLine": 8
+    },
+    {
+      "id": "requireApiKey",
+      "kind": "function",
+      "name": "requireApiKey",
+      "description": "Exported Function 'requireApiKey'. Params: req, res, next.",
+      "file": "server/src/middleware/auth.ts",
+      "startLine": 3,
+      "endLine": 10,
+      "props": [
+        "req",
+        "res",
+        "next"
+      ],
+      "exported": true
+    },
+    {
+      "id": "server/src/middleware/auth.ts",
+      "kind": "file",
+      "name": "server/src/middleware/auth.ts",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "server/src/middleware/auth.ts",
+      "startLine": 1,
+      "endLine": 11
+    },
+    {
+      "id": "errorHandler",
+      "kind": "function",
+      "name": "errorHandler",
+      "description": "Exported Function 'errorHandler'. Params: err, _req, res, _next.",
+      "file": "server/src/middleware/errorHandler.ts",
+      "startLine": 3,
+      "endLine": 6,
+      "props": [
+        "err",
+        "_req",
+        "res",
+        "_next"
+      ],
+      "exported": true
+    },
+    {
+      "id": "server/src/middleware/errorHandler.ts",
+      "kind": "file",
+      "name": "server/src/middleware/errorHandler.ts",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "server/src/middleware/errorHandler.ts",
+      "startLine": 1,
+      "endLine": 7
+    },
+    {
+      "id": "server/src/routes/agent.ts",
+      "kind": "file",
+      "name": "server/src/routes/agent.ts",
+      "description": "Source module — 0 top-level artifacts.",
+      "file": "server/src/routes/agent.ts",
+      "startLine": 1,
+      "endLine": 23
+    },
+    {
+      "id": "server/src/routes/blog.ts",
+      "kind": "file",
+      "name": "server/src/routes/blog.ts",
+      "description": "Source module — 0 top-level artifacts.",
+      "file": "server/src/routes/blog.ts",
+      "startLine": 1,
+      "endLine": 28
+    },
+    {
+      "id": "server/src/routes/caption.ts",
+      "kind": "file",
+      "name": "server/src/routes/caption.ts",
+      "description": "Source module — 0 top-level artifacts.",
+      "file": "server/src/routes/caption.ts",
+      "startLine": 1,
+      "endLine": 28
+    },
+    {
+      "id": "server/src/routes/summarize.ts",
+      "kind": "file",
+      "name": "server/src/routes/summarize.ts",
+      "description": "Source module — 0 top-level artifacts.",
+      "file": "server/src/routes/summarize.ts",
+      "startLine": 1,
+      "endLine": 29
+    },
+    {
+      "id": "TRANSLATE_SYSTEM_PROMPT",
+      "kind": "prompt",
+      "name": "TRANSLATE_SYSTEM_PROMPT",
+      "description": "Prompt / instruction constant 'TRANSLATE_SYSTEM_PROMPT' (125 chars).",
+      "file": "server/src/routes/translate.ts",
+      "startLine": 7,
+      "endLine": 8,
+      "preview": "You are a professional translator. Preserve tone, idioms, and formatting. Never add commentary — output only the translation."
+    },
+    {
+      "id": "server/src/routes/translate.ts",
+      "kind": "file",
+      "name": "server/src/routes/translate.ts",
+      "description": "Source module — 1 top-level artifact.",
+      "file": "server/src/routes/translate.ts",
+      "startLine": 1,
+      "endLine": 32
+    }
+  ],
+  "aiCalls": [
+    {
+      "file": "server/src/lib/clients.ts",
+      "line": 23,
+      "via": "Anthropic messages.create",
+      "promptIds": [],
+      "modelId": "claude-sonnet-5"
+    },
+    {
+      "file": "server/src/routes/agent.ts",
+      "line": 11,
+      "via": "LangChain invoke",
+      "promptIds": []
+    },
+    {
+      "file": "server/src/routes/blog.ts",
+      "line": 12,
+      "via": "Vercel AI SDK",
+      "promptIds": [],
+      "modelIsDynamic": true
+    },
+    {
+      "file": "server/src/routes/caption.ts",
+      "line": 11,
+      "via": "Anthropic messages.create",
+      "promptIds": [],
+      "modelId": "claude-sonnet-5"
+    },
+    {
+      "file": "server/src/routes/summarize.ts",
+      "line": 11,
+      "via": "Anthropic messages.create",
+      "promptIds": [],
+      "modelId": "claude-sonnet-5"
+    },
+    {
+      "file": "server/src/routes/translate.ts",
+      "line": 14,
+      "via": "Anthropic messages.create",
+      "promptIds": [
+        "TRANSLATE_SYSTEM_PROMPT"
+      ],
+      "modelId": "claude-sonnet-5"
+    }
+  ]
+}
