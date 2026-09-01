@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '../../components/ui/Button';
 import { useCaption } from './useCaption';
 
+// @uxid client/src/features/captions/CaptionGenerator::CaptionGenerator
 export function CaptionGenerator() {
   const [imageDescription, setImageDescription] = useState('');
   const { caption, loading, generateCaption } = useCaption();
