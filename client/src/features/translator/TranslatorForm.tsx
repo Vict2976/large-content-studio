@@ -10,6 +10,7 @@ const LANGUAGES = [
   { value: 'ja', label: 'Japanese' },
 ];
 
+// @uxid client/src/features/translator/TranslatorForm::TranslatorForm
 export function TranslatorForm() {
   const [text, setText] = useState('');
   const [targetLanguage, setTargetLanguage] = useState('es');
