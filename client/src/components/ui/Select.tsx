@@ -10,6 +10,7 @@ interface Props {
   ariaLabel: string;
 }
 
+// @uxid client/src/components/ui/Select::Select
 export function Select({ value, options, onChange, ariaLabel }: Props) {
   return (
     <select aria-label={ariaLabel} value={value} onChange={(e) => onChange(e.target.value)}>
