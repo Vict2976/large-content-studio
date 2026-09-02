@@ -1,0 +1,14 @@
+stack: node
+packageManager: npm
+commit: fec39dcd9f45b6abe1fbd397b5a474922a0719bd
+verifiedAt: 2026-09-02T12:05:36.533Z
+commands:
+  install: npm ci
+  build: npm run build --workspaces --if-present
+  analyze: npm run lint --workspaces --if-present
+  test: npm run test --workspaces --if-present
+status:
+  install: none
+  build: none
+  analyze: none
+  test: none
