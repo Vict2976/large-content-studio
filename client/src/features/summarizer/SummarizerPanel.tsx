@@ -3,6 +3,7 @@ import { Button } from '../../components/ui/Button';
 import { TextArea } from '../../components/ui/TextArea';
 import { useSummarizer } from './useSummarizer';
 
+// @uxid client/src/features/summarizer/SummarizerPanel::SummarizerPanel
 export function SummarizerPanel() {
   const [document, setDocument] = useState('');
   const { summary, loading, summarize } = useSummarizer();

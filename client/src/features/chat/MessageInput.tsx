@@ -7,6 +7,7 @@ interface Props {
   disabled: boolean;
 }
 
+// @uxid client/src/features/chat/MessageInput::MessageInput
 export function MessageInput({ onSend, disabled }: Props) {
   const [text, setText] = useState('');
 
