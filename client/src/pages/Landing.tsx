@@ -12,6 +12,7 @@ const FEATURES = [
   { title: 'Captions', body: 'Punchy, on-brand social captions from a one-line description.' },
 ];
 
+// @uxid client/src/pages/Landing::Landing
 export function Landing() {
   return (
     <div>

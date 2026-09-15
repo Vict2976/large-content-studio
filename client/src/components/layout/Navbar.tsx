@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+// @uxid client/src/components/layout/Navbar::Navbar
 export function Navbar() {
   const [query, setQuery] = useState('');
 
