@@ -1,0 +1,54 @@
+{
+  "fontFaces": [],
+  "families": [],
+  "scale": [
+    {
+      "label": "Heading 1",
+      "sizePx": 56,
+      "sizeRaw": "3.5rem",
+      "weight": 600,
+      "source": "client/src/styles/global.css",
+      "line": 32
+    },
+    {
+      "label": "Heading 2",
+      "sizePx": 28,
+      "sizeRaw": "1.75rem",
+      "weight": 600,
+      "source": "client/src/styles/global.css",
+      "line": 38
+    },
+    {
+      "label": "text-lg",
+      "sizePx": 19,
+      "sizeRaw": "19px",
+      "weight": null,
+      "source": "client/src/styles/tokens.css",
+      "line": 39
+    },
+    {
+      "label": "Heading 3",
+      "sizePx": 18,
+      "sizeRaw": "1.125rem",
+      "weight": 600,
+      "source": "client/src/styles/global.css",
+      "line": 43
+    },
+    {
+      "label": "Heading 3",
+      "sizePx": 16,
+      "sizeRaw": "1rem",
+      "weight": null,
+      "source": "client/src/styles/global.css",
+      "line": 207
+    },
+    {
+      "label": "text-sm",
+      "sizePx": 13,
+      "sizeRaw": "13px",
+      "weight": null,
+      "source": "client/src/styles/tokens.css",
+      "line": 38
+    }
+  ]
+}
