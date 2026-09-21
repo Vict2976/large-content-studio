@@ -14,6 +14,7 @@ interface Props {
   onDraft: (draft: string) => void;
 }
 
+// @uxid client/src/features/blog/BlogEditor::BlogEditor
 export function BlogEditor({ onDraft }: Props) {
   const [topic, setTopic] = useState('');
   const [tone, setTone] = useState('friendly');

@@ -4,6 +4,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'ghost';
 }
 
+// @uxid client/src/components/ui/Button::Button
 export function Button({ variant = 'primary', className, ...rest }: ButtonProps) {
   return <button className={`btn btn-${variant} ${className ?? ''}`} {...rest} />;
 }
