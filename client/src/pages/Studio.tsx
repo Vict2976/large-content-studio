@@ -9,6 +9,7 @@ import { SummarizerPanel } from '../features/summarizer/SummarizerPanel';
 import { TranslatorForm } from '../features/translator/TranslatorForm';
 import { CaptionGenerator } from '../features/captions/CaptionGenerator';
 
+// @uxid client/src/pages/Studio::Studio
 export function Studio() {
   const [tab, setTab] = useState<Tab>('blog');
   const [draft, setDraft] = useState('');
