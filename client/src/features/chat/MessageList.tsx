@@ -1,5 +1,6 @@
 import type { ChatMessage } from '../../types';
 
+// @uxid client/src/features/chat/MessageList::MessageList
 export function MessageList({ messages }: { messages: ChatMessage[] }) {
   return (
     <ul className="message-list">
